@@ -1,0 +1,12 @@
+{
+  "name": "platformforge",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "echo \"Use: npm run dev -w @platformforge/frontend|backend\"",
+    "lint": "echo \"No lint configured yet\""
+  }
+}
+

@@ -1,0 +1,123 @@
+:root {
+  color-scheme: light dark;
+  --bg: #0b1020;
+  --card: rgba(255, 255, 255, 0.06);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.7);
+  --border: rgba(255, 255, 255, 0.14);
+  --accent: #6ee7ff;
+  --accent2: #a78bfa;
+  --shadow: rgba(0, 0, 0, 0.45);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f7f8fc;
+    --card: rgba(16, 24, 40, 0.04);
+    --text: rgba(16, 24, 40, 0.95);
+    --muted: rgba(16, 24, 40, 0.7);
+    --border: rgba(16, 24, 40, 0.14);
+    --shadow: rgba(16, 24, 40, 0.12);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: radial-gradient(1200px 800px at 10% 10%, rgba(110, 231, 255, 0.18), transparent 60%),
+    radial-gradient(900px 650px at 90% 20%, rgba(167, 139, 250, 0.18), transparent 60%),
+    var(--bg);
+  color: var(--text);
+}
+
+.container {
+  width: min(980px, calc(100% - 32px));
+  margin: 40px auto;
+  display: grid;
+  gap: 18px;
+}
+
+.header {
+  padding: 18px 18px 12px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: 0 10px 28px var(--shadow);
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}
+
+h1 {
+  margin: 10px 0 6px;
+  font-size: 34px;
+  line-height: 1.15;
+}
+
+.subtle {
+  margin: 0;
+  color: var(--muted);
+}
+
+.card {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: 0 10px 28px var(--shadow);
+}
+
+.grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: linear-gradient(135deg, rgba(110, 231, 255, 0.15), rgba(167, 139, 250, 0.15));
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms ease, border-color 120ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(110, 231, 255, 0.35);
+}
+
+.code {
+  margin: 0;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.18);
+  overflow: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  color: var(--text);
+}
+
+.footer {
+  padding: 4px 2px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
