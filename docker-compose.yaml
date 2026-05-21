@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  frontend:
+    build:
+      context: ./apps/frontend
+      dockerfile: Dockerfile
+    container_name: platforge-frontend
+    ports:
+      - "5173:5173"
+    restart: unless-stopped
+    
+  backend:
+    build:
+      context: ./apps/backend
+      dockerfile: Dockerfile
+    container_name: platforge-backend
+    ports:
+      - "3001:3001"
+    restart: unless-stopped
+
+  worker:
+    build:
+      context: ./apps/worker
+      dockerfile: Dockerfile
+    container_name: platforge-worker
+    ports:
+      - "4000:4000"
+    restart: unless-stopped
