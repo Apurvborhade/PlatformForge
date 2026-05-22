@@ -12,4 +12,8 @@ RUN npm run build
 
 EXPOSE 5173
 
-CMD ["npm", "start"]
+FROM nginx:alpine
+
+COPY --from=frontend /app/dist /usr/share/nginx/html
+
+EXPOSE 80
