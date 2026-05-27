@@ -21,8 +21,8 @@ spec:
       containers:
         - name: worker
 
-          image: platformforge-worker:latest
-          imagePullPolicy: Never
+          image: apurvaborhade/platformforge-worker:latest
+
           env:
             - name: NODE_ENV
               value: production

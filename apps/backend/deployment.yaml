@@ -21,8 +21,8 @@ spec:
       containers:
         - name: backend
 
-          image: platformforge-backend:latest
-          imagePullPolicy: Never
+          image: apurvaborhade/platformforge-backend:latest
+
 
           ports:
             - containerPort: 3001

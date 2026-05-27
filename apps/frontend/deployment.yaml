@@ -21,8 +21,8 @@ spec:
       containers:
         - name: frontend
 
-          image: platformforge-frontend:latest
-          imagePullPolicy: Never
+          image: apurvaborhade/platformforge-frontend:latest
+
           ports:
             - containerPort: 80
 
