@@ -28,7 +28,7 @@ const backendResult = document.querySelector("#backend-result");
 document.querySelector("#ping-backend").addEventListener("click", async () => {
   backendResult.textContent = "Loading...";
   try {
-    const response = await fetch("http://localhost:8000/api/health", {
+    const response = await fetch("http://localhost:8080/api/health", {
       headers: { Accept: "application/json" }
     });
     const text = await response.text();
