@@ -6,7 +6,7 @@ metadata:
   namespace: platformforge
 
 spec:
-  replicas: 1
+  replicas: {{ .Values.worker.replicaCount }}
 
   selector:
     matchLabels:
@@ -21,7 +21,7 @@ spec:
       containers:
         - name: worker
 
-          image: apurvaborhade/platformforge-worker:latest
+          image: {{ .Values.worker.image.repository }}:{{ .Values.worker.image.tag }}
 
           env:
             - name: NODE_ENV
