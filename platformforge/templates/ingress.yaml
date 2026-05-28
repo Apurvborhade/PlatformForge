@@ -28,12 +28,3 @@ spec:
                 name: frontend-service
                 port:
                   number: 80
-          
-          - path: /metrics
-            pathType: Prefix
-
-            backend:
-              service:
-                name: backend-metrics
-                port:
-                  number: 80
