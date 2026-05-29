@@ -18,6 +18,7 @@ spec:
           for: 5s
           labels:
             severity: critical
+            namespace: platformforge
           annotations:
             summary: Backend is down
 
