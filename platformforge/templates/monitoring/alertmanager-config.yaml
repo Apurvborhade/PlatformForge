@@ -3,7 +3,7 @@ kind: AlertmanagerConfig
 
 metadata:
   name: platformforge-slack
-  namespace: monitoring
+  namespace: platformforge
 
   labels:
     release: monitoring
