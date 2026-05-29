@@ -21,13 +21,6 @@ spec:
           annotations:
             summary: Backend is down
 
-        - alert: PodRestarting
-          expr: increase(kube_pod_container_status_restarts_total[5m]) > 0
-          for: 1m
-          labels:
-            severity: warning
-          annotations:
-            summary: Pod restarting frequently
 
         - alert: HighCPUUsage
           expr: |
