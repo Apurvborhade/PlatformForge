@@ -15,7 +15,7 @@ spec:
 
         - alert: BackendDown
           expr: absent(up{service="backend-metrics"})
-          for: 1m
+          for: 5s
           labels:
             severity: critical
           annotations:
