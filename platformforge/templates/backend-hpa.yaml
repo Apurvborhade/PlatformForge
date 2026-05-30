@@ -5,13 +5,14 @@ metadata:
   name: backend-hpa
   namespace: platformforge
 
+
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
     name: backend
 
-  minReplicas: 2
+  minReplicas: 0
   maxReplicas: 10
 
   metrics:
