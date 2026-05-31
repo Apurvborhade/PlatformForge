@@ -31,3 +31,24 @@ spec:
             severity: warning
           annotations:
             summary: High CPU usage detected
+        
+        - alert: HighMemoryUsage
+          expr: |
+            container_memory_working_set_bytes
+            / container_spec_memory_limit_bytes > 0.8
+          for: 2m
+          labels:
+            severity: warning
+            namespace: platformforge
+          annotations:
+            summary: High Memory usage detected
+        
+        - alert: HPAAtMaxReplicas
+          expr: |
+            kube_horizontalpodautoscaler_status_current_replicas
+            ==
+            kube_horizontalpodautoscaler_spec_max_replicas
+          for: 5m
+          labels:
+            severity: warning
+            namespace: platformforge
